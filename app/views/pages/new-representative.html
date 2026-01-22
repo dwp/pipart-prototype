@@ -15,31 +15,29 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">
-      Edit personal details
-    </h1>
-
     <form action="case-details" method="post" class="govuk-form-group">
+      <h1 class="govuk-heading-m">
+        Representative details
+      </h1>
 
-      
       <div class="govuk-form-group">
-        <label class="govuk-label" for="sort">
-          Title/Pronouns
+        <label class="govuk-label" for="representative-name">
+          Representative name
         </label>
-        <select class="govuk-select" id="sort" name="sort">
-          <option value="op1">Option 1</option>
-          <option value="mr" selected>Mr</option>
-          <option value="op3">Option 3</option>
-          <option value="op4">Option 4</option>
-        </select>
+        <input class="govuk-input govuk-!-width-one-half" id="representative-name" name="representative-name" type="text" value="">
       </div>
 
       <fieldset class="govuk-fieldset govuk-!-margin-top-7">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Representative address
+          </h2>
+        </legend>
         <div class="govuk-form-group">
           <label class="govuk-label" for="address-line-1">
             Address line 1
           </label>
-          <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1" value="123 Sample Street">
+          <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1" value="">
         </div>
         <div class="govuk-form-group">
           <label class="govuk-label" for="address-line-2">
@@ -51,7 +49,7 @@
           <label class="govuk-label" for="address-town">
             Town or city
           </label>
-          <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="addressTown" type="text" autocomplete="address-level2" value="Example town">
+          <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="addressTown" type="text" autocomplete="address-level2" value="">
         </div>
         <div class="govuk-form-group">
           <label class="govuk-label" for="address-county">
@@ -63,12 +61,12 @@
           <label class="govuk-label" for="address-postcode">
             Postcode
           </label>
-          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code" value="AB1 2CD">
+          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code" value="">
         </div>
       </fieldset>
 
       <button type="submit" class="govuk-button govuk-!-margin-top-7" data-module="govuk-button">
-        Save
+        Next
       </button>
     </form>
 

@@ -1,0 +1,113 @@
+{% extends "layouts/tl1-summary-layout.html" %}
+
+{% set pageName="Case details" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third summary-left-panel">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+    </br>
+    </br>
+    <h1 class="govuk-heading-l">
+      TL1 Extension Summary
+    </h1>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Claimants name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Arthur Morgan
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          National Insurance number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          AA12345 C
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          24 Saint Denis Street<br>London<br>SE23 5GG
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date of birth
+        </dt>
+        <dd class="govuk-summary-list__value">
+          12/03/1965
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Benefit involved
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Personal Independence Payments
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date extension required to
+        </dt>
+        <dd class="govuk-summary-list__value">
+          13/11/2027 (date extension wanted to)
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date extension</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Reason for lateness (HMCTS ref number for internal purpose only)
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Administrative timescales (HMCTS ref 04)
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> reason for lateness</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Explanation for lateness
+        </dt>
+        <dd class="govuk-summary-list__value">
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti 
+          atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt 
+          in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> explanation for lateness</span></a>
+        </dd>
+      </div>
+    </dl>
+
+  </div>
+
+  <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0">
+    <div class="pdf-viewer">
+      <div class="pdf-viewer-bar">
+        <img class="pdf-viewer-images" src="/public/images/left.png" alt="left options">
+        <img class="pdf-viewer-images" src="/public/images/middle.png" alt="middle options">
+        <img class="pdf-viewer-images" src="/public/images/right.png" alt="right options">
+      </div>
+      <div class="pdf-viewer-content">
+        <img class="pdf-viewer-example" src="/public/images/example.png" alt="pdf example">
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

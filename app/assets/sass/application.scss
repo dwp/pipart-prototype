@@ -68,3 +68,45 @@
     display: flex;
   }
 }
+
+.container-full-width {
+  margin: 0 0 0 30px;
+  max-width: 100%;
+}
+
+.custom-main {
+  padding-top: 0;
+}
+
+.custom-html {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.pdf-viewer {
+  &-images {
+    height: 50px;
+  }
+  &-bar {
+    background-color: #3C3C3C;
+    display: flex;
+    justify-content: space-between;
+  }
+  &-content {
+    background-color: #282828;
+    display: flex;
+    justify-content: center;
+    padding-top: 130px;
+  }
+  &-example {
+    height: 680px;
+  }
+}
+
+.summary-left-panel {
+  border-right: 2px solid #b1b4b6;
+  height: 85vh;
+  overflow-y: auto;
+  padding-right: 25px;
+}
