@@ -15,10 +15,9 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <div class="loading-container">
-      <div class="loading" aria-live="polite" role="status"></div>
-      <p class="govuk-body loading-text">Loading customer details, this can take around 5-10 minutes.</p>
-    </div>
+    <h1 class="govuk-heading-l">Sorry, there is a problem loading the customer details</h1>
+
+    <p class="govuk-body loading-text">Please <a href="new-personal" class="govuk-link govuk-link--no-visited-state">enter the customer details manually</a></p>
 
     <h1 class="govuk-heading-s">
       Case documents
@@ -46,8 +45,4 @@
   </div>
 </div>
 
-{% endblock %}
-
-{% block pageScripts %}
-  <script src="/public/javascripts/page-load-drs.js"></script>
 {% endblock %}
