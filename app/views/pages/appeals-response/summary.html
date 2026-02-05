@@ -1,0 +1,56 @@
+{% extends "layouts/appeal-summary-layout.html" %}
+
+{% set pageName="Case details" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third summary-left-panel">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+    </br>
+    </br>
+    <h1 class="govuk-heading-l">
+      Appeal response summary
+    </h1>
+
+    <ul class="pdf-nav">
+      <li class="pdf-nav-item">
+        <a class="pdf-nav-link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Change case details</a>
+      </li>
+      <li class="pdf-nav-item pdf-nav-item--active">
+        <a class="pdf-nav-link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Change schedule of events</a>
+      </li>
+      <li class="pdf-nav-item">
+        <a class="pdf-nav-link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Change illness and disabilities</a>
+      </li>
+      <li class="pdf-nav-item">
+        <a class="pdf-nav-link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Change facts of the case</a>
+      </li>
+      <li class="pdf-nav-item">
+        <a class="pdf-nav-link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Change decision under appeal</a>
+      </li>
+      <li class="pdf-nav-item">
+        <a class="pdf-nav-link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Change issues raised by the appeal</a>
+      </li>
+      <li class="pdf-nav-item">
+        <a class="pdf-nav-link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Change conclusion</a>
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0">
+    <div class="pdf-viewer-2">
+      <div class="pdf-viewer-2-bar">
+        <img class="pdf-viewer-2-images" src="/public/images/left.png" alt="left options">
+        <img class="pdf-viewer-2-images" src="/public/images/middle.png" alt="middle options">
+        <img class="pdf-viewer-2-images" src="/public/images/right.png" alt="right options">
+      </div>
+      <div class="pdf-viewer-2-content">
+        <img class="pdf-viewer-2-example" src="/public/images/example-3.png" alt="pdf example">
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
