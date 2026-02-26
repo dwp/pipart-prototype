@@ -151,3 +151,24 @@
     padding: 2px 0;
   }
 }
+
+.facts-table-cell {
+  vertical-align: middle !important;
+}
+
+.filters {
+  &-box-1 {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid  #cecece;
+    align-items: center;
+    padding: 10px 15px;
+  }
+  &-box-2 {
+    border: 1px solid  #cecece;
+    padding: 10px 15px;
+  }
+  &-dates {
+    display: flex;
+  }
+}

@@ -58,10 +58,17 @@
       </div>
 
       <div class="govuk-form-group">
-        <label class="govuk-label" for="extension-reason">
-          Reason for lateness (HMCTS ref number for internal purpose only)
+        <label class="govuk-label" for="sort">
+          Reason for lateness
         </label>
-        <textarea class="govuk-textarea" id="extension-reason" name="extensionReason" rows="5"></textarea>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="default" selected>Select</option>
+          <option value="01">Awaiting further evidence</option>
+          <option value="02">Awaiting additional customer contact</option>
+          <option value="03">Awaiting advice on further evidence presented</option>
+          <option value="04">Case requires more detailed consideration</option>
+          <option value="05">Administrative timescales</option>
+        </select>
       </div>
 
       <div class="govuk-form-group">

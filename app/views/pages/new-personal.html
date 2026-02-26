@@ -1,4 +1,4 @@
-{% extends "layouts/case-layout.html" %}
+{% extends "layouts/case-layout-no-name.html" %}
 
 {% set pageName="Case details" %}
 
@@ -32,7 +32,19 @@
         </select>
       </div>
 
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Customers name
+        </label>
+        <input class="govuk-input" id="event-name" name="eventName" type="text">
+      </div>
+
       <fieldset class="govuk-fieldset govuk-!-margin-top-7">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Customer address
+          </h2>
+        </legend>
         <div class="govuk-form-group">
           <label class="govuk-label" for="address-line-1">
             Address line 1

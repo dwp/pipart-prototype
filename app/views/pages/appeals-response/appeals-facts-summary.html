@@ -1,0 +1,84 @@
+{% extends "layouts/appeal-layout.html" %}
+
+{% set pageName="Home" %}
+
+{% block beforeContent %}
+
+  <div class="govuk-width-container">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="appeals-tasklist" method="post" class="govuk-form-group">
+
+      <h1 class="govuk-heading-l">
+        <span class="govuk-caption-l">Appeal response</span>
+        Facts of the case summary
+      </h1>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Date</th>
+            <th scope="col" class="govuk-table__header">Fact</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">07/07/2025</th>
+            <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in orci ex. Morbi mollis mi est, eget sollicitudin augue condimentum vel. Nulla commodo, justo et porttitor malesuada, lectus sem accumsan lorem, vitae ultrices neque velit a est. Quisque convallis, est nec commodo feugiat, lorem arcu consequat arcu, in malesuada dolor magna efficitur erat. In imperdiet porta massa, quis posuere ex sodales ac. Vestibulum tempus, ipsum a viverra volutpat, neque dui ornare leo, vitae porta lorem massa quis orci. Suspendisse vitae fermentum lacus, in malesuada libero. Etiam eu quam tellus.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">12/07/2025</th>
+            <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in orci ex. Morbi mollis mi est, eget sollicitudin augue condimentum vel. Nulla commodo, justo et porttitor malesuada, lectus sem accumsan lorem, vitae ultrices neque velit a est. Quisque convallis, est nec commodo feugiat, lorem arcu consequat arcu, in malesuada dolor magna efficitur erat. In imperdiet porta massa, quis posuere ex sodales ac. Vestibulum tempus, ipsum a viverra volutpat, neque dui ornare leo, vitae porta lorem massa quis orci. Suspendisse vitae fermentum lacus, in malesuada libero. Etiam eu quam tellus.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">13/07/2025</th>
+            <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in orci ex. Morbi mollis mi est, eget sollicitudin augue condimentum vel. Nulla commodo, justo et porttitor malesuada, lectus sem accumsan lorem, vitae ultrices neque velit a est. Quisque convallis, est nec commodo feugiat, lorem arcu consequat arcu, in malesuada dolor magna efficitur erat. In imperdiet porta massa, quis posuere ex sodales ac. Vestibulum tempus, ipsum a viverra volutpat, neque dui ornare leo, vitae porta lorem massa quis orci. Suspendisse vitae fermentum lacus, in malesuada libero. Etiam eu quam tellus.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">17/07/2025</th>
+            <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in orci ex. Morbi mollis mi est, eget sollicitudin augue condimentum vel. Nulla commodo, justo et porttitor malesuada, lectus sem accumsan lorem, vitae ultrices neque velit a est. Quisque convallis, est nec commodo feugiat, lorem arcu consequat arcu, in malesuada dolor magna efficitur erat. In imperdiet porta massa, quis posuere ex sodales ac. Vestibulum tempus, ipsum a viverra volutpat, neque dui ornare leo, vitae porta lorem massa quis orci. Suspendisse vitae fermentum lacus, in malesuada libero. Etiam eu quam tellus.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">20/07/2025</th>
+            <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in orci ex. Morbi mollis mi est, eget sollicitudin augue condimentum vel. Nulla commodo, justo et porttitor malesuada, lectus sem accumsan lorem, vitae ultrices neque velit a est. Quisque convallis, est nec commodo feugiat, lorem arcu consequat arcu, in malesuada dolor magna efficitur erat. In imperdiet porta massa, quis posuere ex sodales ac. Vestibulum tempus, ipsum a viverra volutpat, neque dui ornare leo, vitae porta lorem massa quis orci. Suspendisse vitae fermentum lacus, in malesuada libero. Etiam eu quam tellus.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">21/07/2025</th>
+            <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in orci ex. Morbi mollis mi est, eget sollicitudin augue condimentum vel. Nulla commodo, justo et porttitor malesuada, lectus sem accumsan lorem, vitae ultrices neque velit a est. Quisque convallis, est nec commodo feugiat, lorem arcu consequat arcu, in malesuada dolor magna efficitur erat. In imperdiet porta massa, quis posuere ex sodales ac. Vestibulum tempus, ipsum a viverra volutpat, neque dui ornare leo, vitae porta lorem massa quis orci. Suspendisse vitae fermentum lacus, in malesuada libero. Etiam eu quam tellus.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">24/07/2025</th>
+            <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in orci ex. Morbi mollis mi est, eget sollicitudin augue condimentum vel. Nulla commodo, justo et porttitor malesuada, lectus sem accumsan lorem, vitae ultrices neque velit a est. Quisque convallis, est nec commodo feugiat, lorem arcu consequat arcu, in malesuada dolor magna efficitur erat. In imperdiet porta massa, quis posuere ex sodales ac. Vestibulum tempus, ipsum a viverra volutpat, neque dui ornare leo, vitae porta lorem massa quis orci. Suspendisse vitae fermentum lacus, in malesuada libero. Etiam eu quam tellus.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">25/07/2025</th>
+            <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in orci ex. Morbi mollis mi est, eget sollicitudin augue condimentum vel. Nulla commodo, justo et porttitor malesuada, lectus sem accumsan lorem, vitae ultrices neque velit a est. Quisque convallis, est nec commodo feugiat, lorem arcu consequat arcu, in malesuada dolor magna efficitur erat. In imperdiet porta massa, quis posuere ex sodales ac. Vestibulum tempus, ipsum a viverra volutpat, neque dui ornare leo, vitae porta lorem massa quis orci. Suspendisse vitae fermentum lacus, in malesuada libero. Etiam eu quam tellus.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">26/07/2025</th>
+            <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in orci ex. Morbi mollis mi est, eget sollicitudin augue condimentum vel. Nulla commodo, justo et porttitor malesuada, lectus sem accumsan lorem, vitae ultrices neque velit a est. Quisque convallis, est nec commodo feugiat, lorem arcu consequat arcu, in malesuada dolor magna efficitur erat. In imperdiet porta massa, quis posuere ex sodales ac. Vestibulum tempus, ipsum a viverra volutpat, neque dui ornare leo, vitae porta lorem massa quis orci. Suspendisse vitae fermentum lacus, in malesuada libero. Etiam eu quam tellus.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">27/07/2025</th>
+            <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in orci ex. Morbi mollis mi est, eget sollicitudin augue condimentum vel. Nulla commodo, justo et porttitor malesuada, lectus sem accumsan lorem, vitae ultrices neque velit a est. Quisque convallis, est nec commodo feugiat, lorem arcu consequat arcu, in malesuada dolor magna efficitur erat. In imperdiet porta massa, quis posuere ex sodales ac. Vestibulum tempus, ipsum a viverra volutpat, neque dui ornare leo, vitae porta lorem massa quis orci. Suspendisse vitae fermentum lacus, in malesuada libero. Etiam eu quam tellus.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Submit
+      </button>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

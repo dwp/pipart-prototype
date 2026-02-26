@@ -1,0 +1,154 @@
+{% extends "layouts/appeal-layout.html" %}
+
+{% set pageName="Home" %}
+
+{% block beforeContent %}
+
+  <div class="govuk-width-container">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      <span class="govuk-caption-l">Appeal response</span>
+      Fact details
+    </h1>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+        <legend class="govuk-fieldset__legend">
+          Fact date
+        </legend>
+        <div id="passport-issued-hint" class="govuk-hint">
+          For example, 27 3 2026
+        </div>
+        <div class="govuk-date-input" id="passport-issued">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="07">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="07">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="2025">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="original-text">
+        Original text
+      </label>
+      <textarea class="govuk-textarea" id="original-text" name="originalText" rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum fringilla magna, vel semper orci maximus non. Suspendisse mollis, enim eu efficitur tempor
+
+neque eros placerat urna, sit amet vehicula neque magna quis ipsum. Cras semper est elit, et tincidunt ligula dignissim quis. Cras tristique lectus ut sem posuere
+
+luctus a sit amet odio. In ultricies rhoncus posuere. Donec lacus dui, eleifend sit amet auctor eget, vulputate quis nunc. Nullam facilisis ipsum vitae mi eleifend,
+
+hendrerit ultrices lorem congue. Vivamus id massa facilisis, semper turpis egestas, porta diam. Aenean aliquet arcu diam, a fringilla risus porta eu. Vivamus vel
+
+scelerisque lorem. Nulla et lacus vitae nulla convallis egestas.</textarea>
+    </div>
+
+    <button id="generate-text-btn" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Generate and use an AI summary
+    </button>
+
+    <div class="govuk-form-group" id="generated-summary-form" style="display: none;">
+      <label class="govuk-label" for="generated-summary">
+        Generated summary
+      </label>
+      <textarea class="govuk-textarea govuk-!-margin-bottom-2" id="generated-summary" name="generatedSummary" rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum fringilla magna, vel semper orci maximus non. Suspendisse mollis, enim eu efficitur tempor
+
+neque eros placerat urna, sit amet vehicula neque magna quis ipsum. Cras semper est elit, et tincidunt ligula dignissim quis. Cras tristique lectus ut sem posuere
+
+luctus a sit amet odio. In ultricies rhoncus posuere. Donec lacus dui, eleifend sit amet auctor eget, vulputate quis nunc. Nullam facilisis ipsum vitae mi eleifend,
+
+hendrerit ultrices lorem congue. Vivamus id massa facilisis, semper turpis egestas, porta diam. Aenean aliquet arcu diam, a fringilla risus porta eu. Vivamus vel
+
+scelerisque lorem. Nulla et lacus vitae nulla convallis egestas.</textarea>
+    <p class="govuk-body"><a href="#" id="generated-summary-delete" class="govuk-link govuk-link--no-visited-state">Delete</a></p>
+    </div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend">
+          Would you like to include fact?
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="reviewFact" name="reviewFact" type="radio" value="Include">
+            <label class="govuk-label govuk-radios__label" for="reviewFact">
+              Include fact
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="reviewFact-2" name="reviewFact" type="radio" value="Reject">
+            <label class="govuk-label govuk-radios__label" for="reviewFact-2">
+              Reject fact
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div id="include-schedule-box" style="display: none;">
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="include-schedule-hint">
+          <legend class="govuk-visually-hidden">
+            Which types of include-schedule do you transport?
+          </legend>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="include-schedule" name="include-schedule" type="checkbox" value="yes">
+              <label class="govuk-label govuk-checkboxes__label" for="include-schedule">
+                Include in schedule of events 
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    
+    <form action="appeals-facts" method="post" class="govuk-form-group">
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Next fact
+        </button>
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Save and return
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
+
+
+{% block pageScripts %}
+  <script src="/public/javascripts/fact-details.js"></script>
+{% endblock %}

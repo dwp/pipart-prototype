@@ -1,0 +1,152 @@
+{% extends "layouts/appeal-layout.html" %}
+
+{% set pageName="Home" %}
+
+{% block beforeContent %}
+
+  <div class="govuk-width-container">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="appeals-tasklist" method="post" class="govuk-form-group">
+
+      <h1 class="govuk-heading-l">
+        <span class="govuk-caption-l">Appeal response</span>
+        Case details summary
+      </h1>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Appeal Tribunal Reference Number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            1764975112775114 
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Type of Appeal
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Award Review
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Personal Details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Mr Arthur Morgan
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            24 Saint Denis Street<br>London<br>SE23 5GG
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            12/03/1965
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            National Insurance number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            AA12345 C
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Benefit
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Personal Independence Payment
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of Claim
+          </dt>
+          <dd class="govuk-summary-list__value">
+            12/08/2016
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Decision effective date (age at effective date)
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <span style="font-weight: bold;">25/02/2025</span><br>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti 
+            atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt 
+            in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> effective date</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of Outcome Decision
+          </dt>
+          <dd class="govuk-summary-list__value">
+            14/09/2025
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of Reconsideration Decision
+          </dt>
+          <dd class="govuk-summary-list__value">
+            25/11/2025
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of Appeal Request
+          </dt>
+          <dd class="govuk-summary-list__value">
+            20/12/2025
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Decision Maker’s Name and Address where documents for the Decision Maker may be sent or delivered
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Adele O'Connor<br>Personal Independence Payment (9)<br>Mail Handling Site B<br>Wolverhampton<br>WV99 1AG
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name and addresses of any other respondents and their representatives
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Miss Janice Smith<br>Abbotslodge<br>Grant Street<br>North Arbroath<br>NA06 3TU
+          </dd>
+        </div>
+      </dl>
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Submit
+      </button>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
