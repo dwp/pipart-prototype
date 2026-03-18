@@ -1,0 +1,108 @@
+{% extends "layouts/appeal-layout.html" %}
+
+{% set pageName="Home" %}
+
+{% block beforeContent %}
+
+  <div class="govuk-width-container">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="appeals-tasklist" method="post" class="govuk-form-group">
+
+      <h1 class="govuk-heading-l">
+        <span class="govuk-caption-l">Appeal response</span>
+        Issues raised by the appeal summary
+      </h1>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Grounds for supersession
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="appeals-issues-raised">Change<span class="govuk-visually-hidden"> name</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Effective Date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            05 06 2027
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="appeals-issues-raised">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Activities covered by Decision Makers decision
+          </dt>
+          <dd class="govuk-summary-list__value">Taking nutrition, Managing therapy or monitoring a health condition, Washing and bathing
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="appeals-issues-raised-2">Change<span class="govuk-visually-hidden"> address</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Activities specified in the appeal
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Making budgeting decisions, Planning and following journeys
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="appeals-issues-raised">Change<span class="govuk-visually-hidden"> name</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Other benefits
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Although is entitled to Universal Credit (UC), this doesn't bring
+            automatic entitlement to PIP, which is assessed separately and under different criteria.<br>
+            <br>
+            UC assesses fitness to work. This factor isn't relevant to the PIP
+            qualifying criteria. The recent relevant PIP evidence shows has the
+            functional ability to carry out the PIP daily living and mobility activities as 
+            reflected in the decision under appeal.
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="appeals-issues-raised">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Reasons for preferred evidence
+          </dt>
+          <dd class="govuk-summary-list__value">
+            During the application process, evidence is gathered to build a clear picture of a claimant's health condition and the impact this has on their day-to-day lives including information gathered by the health professional, their report and all the information provided by the claimant.<br>
+            <br>
+            The information gathered from this process enabled the most appropriate activity descriptors to be chosen and full justifications of descriptor choices has been explained in the Appeal Response.
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="appeals-issues-raised">Change<span class="govuk-visually-hidden"> name</span></a>
+          </dd>
+        </div>
+      </dl>
+    
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Next
+      </button>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

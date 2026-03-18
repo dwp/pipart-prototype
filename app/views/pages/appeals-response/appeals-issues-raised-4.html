@@ -1,0 +1,43 @@
+{% extends "layouts/appeal-layout.html" %}
+
+{% set pageName="Home" %}
+
+{% block beforeContent %}
+
+  <div class="govuk-width-container">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="appeals-issues-raised-5" method="post" class="govuk-form-group">
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <span class="govuk-caption-l">Appeal response</span>
+          <label class="govuk-label govuk-label--l" for="more-detail">
+            Other benefits
+          </label>
+        </h1>
+        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5">
+Although is entitled to Universal Credit (UC), this doesn't bring
+automatic entitlement to PIP, which is assessed separately and under different criteria.
+
+UC assesses fitness to work. This factor isn't relevant to the PIP
+qualifying criteria. The recent relevant PIP evidence shows has the
+functional ability to carry out the PIP daily living and mobility activities as 
+reflected in the decision under appeal.</textarea>
+      </div>
+
+      <button type="submit" class="govuk-button govuk-!-margin-top-5" data-module="govuk-button">
+        Next
+      </button>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

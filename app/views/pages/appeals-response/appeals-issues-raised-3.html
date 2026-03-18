@@ -1,0 +1,112 @@
+{% extends "layouts/appeal-layout.html" %}
+
+{% set pageName="Home" %}
+
+{% block beforeContent %}
+
+  <div class="govuk-width-container">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="appeals-issues-raised-4" method="post" class="govuk-form-group">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">Appeal response</span>
+            <h1 class="govuk-fieldset__heading">
+              Activities specified in the appeal
+            </h1>
+          </legend>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="decision" name="decision" type="checkbox" value="1">
+              <label class="govuk-label govuk-checkboxes__label" for="decision">
+                Preparing food
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="decision-2" name="decision" type="checkbox" value="2" disabled>
+              <label class="govuk-label govuk-checkboxes__label" for="decision-2">
+                Taking nutrition
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="decision-3" name="decision" type="checkbox" value="3" disabled>
+              <label class="govuk-label govuk-checkboxes__label" for="decision-3">
+                Managing therapy or monitoring a health condition
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="decision" name="decision" type="checkbox" value="4" disabled>
+              <label class="govuk-label govuk-checkboxes__label" for="decision">
+                Washing and bathing
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="decision-2" name="decision" type="checkbox" value="5">
+              <label class="govuk-label govuk-checkboxes__label" for="decision-2">
+                Managing toilet needs or incontinence
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="decision-3" name="decision" type="checkbox" value="6">
+              <label class="govuk-label govuk-checkboxes__label" for="decision-3">
+                Dressing and undressing
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="decision" name="decision" type="checkbox" value="7">
+              <label class="govuk-label govuk-checkboxes__label" for="decision">
+                Communicating verbally
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="decision-2" name="decision" type="checkbox" value="8">
+              <label class="govuk-label govuk-checkboxes__label" for="decision-2">
+                Reading and understanding signs, symbols and words
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="decision-3" name="decision" type="checkbox" value="9">
+              <label class="govuk-label govuk-checkboxes__label" for="decision-3">
+                Engaging with other people face to face
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="decision" name="decision" type="checkbox" value="10">
+              <label class="govuk-label govuk-checkboxes__label" for="decision">
+                Making budgeting decisions
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="decision-2" name="decision" type="checkbox" value="11">
+              <label class="govuk-label govuk-checkboxes__label" for="decision-2">
+                Planning and following journeys
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="decision-3" name="decision" type="checkbox" value="12">
+              <label class="govuk-label govuk-checkboxes__label" for="decision-3">
+                Moving around
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button type="submit" class="govuk-button govuk-!-margin-top-5" data-module="govuk-button">
+        Next
+      </button>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

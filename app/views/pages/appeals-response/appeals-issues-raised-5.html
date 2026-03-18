@@ -1,0 +1,39 @@
+{% extends "layouts/appeal-layout.html" %}
+
+{% set pageName="Home" %}
+
+{% block beforeContent %}
+
+  <div class="govuk-width-container">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="appeals-issues-raised-summary" method="post" class="govuk-form-group">
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <span class="govuk-caption-l">Appeal response</span>
+          <label class="govuk-label govuk-label--l" for="more-detail">
+            Reasons for preferred evidence
+          </label>
+        </h1>
+        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5">
+During the application process, evidence is gathered to build a clear picture of a claimant's health condition and the impact this has on their day-to-day lives including information gathered by the health professional, their report and all the information provided by the claimant.
+
+The information gathered from this process enabled the most appropriate activity descriptors to be chosen and full justifications of descriptor choices has been explained in the Appeal Response.</textarea>
+      </div>
+
+      <button type="submit" class="govuk-button govuk-!-margin-top-5" data-module="govuk-button">
+        Next
+      </button>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
