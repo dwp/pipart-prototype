@@ -16,15 +16,34 @@
   <div class="govuk-grid-column-two-thirds">
 
     <form action="case-details" method="post" class="govuk-form-group">
-      <h1 class="govuk-heading-m">
-        Representative details
+      <h1 class="govuk-heading-l">
+        Change representative details
       </h1>
 
       <div class="govuk-form-group">
-        <label class="govuk-label" for="representative-name">
-          Representative name
+        <label class="govuk-label" for="sort">
+          Title/Pronouns
         </label>
-        <input class="govuk-input govuk-!-width-one-half" id="representative-name" name="representative-name" type="text" value="Tony Yewson">
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="op1">Option 1</option>
+          <option value="mr" selected>Mr</option>
+          <option value="op3">Option 3</option>
+          <option value="op4">Option 4</option>
+        </select>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="first-name">
+          First name
+        </label>
+        <input class="govuk-input" id="first-name" name="firstName" type="text" value="Tony">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="second-name">
+          Second name
+        </label>
+        <input class="govuk-input" id="second-name" name="secondName" type="text" value="Yewson">
       </div>
 
       <fieldset class="govuk-fieldset govuk-!-margin-top-7">

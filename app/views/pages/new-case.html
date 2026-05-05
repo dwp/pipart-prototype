@@ -14,17 +14,18 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">New case</span>
+    <h1 class="govuk-heading-l">Search for a customer</h1>
 
     <form action="case-loading" method="post" class="govuk-form-group">
 
-      <h1 class="govuk-heading-m">
-        New case
-      </h1>
-
       <div class="govuk-form-group">
-        <label class="govuk-label" for="nino">
+        <label class="govuk-label govuk-!-font-weight-bold" for="nino">
           National Insurance number
         </label>
+        <div id="national-insurance-number-hint" class="govuk-hint">
+          For example, ‘QQ 12 34 56 C’
+        </div>
         <input class="govuk-input govuk-!-width-one-half" id="nino" name="nino" type="text">
       </div>
 

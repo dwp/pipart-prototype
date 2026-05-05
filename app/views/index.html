@@ -7,77 +7,218 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
+    <span class="govuk-caption-l">Newcastle Upon Tyne</span>
     <h1 class="govuk-heading-l">
-      John Marston
+      My cases
     </h1>
 
-    <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-table__caption--m">My cases</caption>
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Case</th>
-          <th scope="col" class="govuk-table__header">Case ID</th>
-          <th scope="col" class="govuk-table__header">Customer</th>
-          <th scope="col" class="govuk-table__header"></th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Case 1</th>
-          <td class="govuk-table__cell">#12345</td>
-          <td class="govuk-table__cell">Arthur Morgan</td>
-          <td class="govuk-table__cell">
-            <ul class="govuk-summary-list__actions-list">
-            <li class="govuk-summary-list__actions-list-item">
-              <a class="govuk-link govuk-link--no-visited-state" href="pages/case-details">Open<span class="govuk-visually-hidden"> case 1</span></a>
-            </li>
-          </ul>
-          </td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Case 2</th>
-          <td class="govuk-table__cell">#15646</td>
-          <td class="govuk-table__cell">Arthur retry</td>
-          <td class="govuk-table__cell">
-            <ul class="govuk-summary-list__actions-list">
-            <li class="govuk-summary-list__actions-list-item">
-              <a class="govuk-link govuk-link--no-visited-state" href="pages/case-loading-retry">Open<span class="govuk-visually-hidden"> case 2</span></a>
-            </li>
-          </ul>
-          </td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Case 3</th>
-          <td class="govuk-table__cell">#87658</td>
-          <td class="govuk-table__cell">Arthur manual</td>
-          <td class="govuk-table__cell">
-            <ul class="govuk-summary-list__actions-list">
-            <li class="govuk-summary-list__actions-list-item">
-              <a class="govuk-link govuk-link--no-visited-state" href="pages/case-loading-error">Open<span class="govuk-visually-hidden"> case 3</span></a>
-            </li>
-          </ul>
-          </td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Case 4</th>
-          <td class="govuk-table__cell">#54332</td>
-          <td class="govuk-table__cell">Arthur Morgan</td>
-          <td class="govuk-table__cell">
-            <ul class="govuk-summary-list__actions-list">
-            <li class="govuk-summary-list__actions-list-item">
-              <a class="govuk-link govuk-link--no-visited-state" href="pages/case-details">Open<span class="govuk-visually-hidden"> case 4</span></a>
-            </li>
-          </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <a type="submit" href="pages/new-case" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+      Create new case
+      <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+      </svg>
+    </a>
 
-    <form action="pages/new-case" method="post" class="govuk-form-group">
-      <button type="submit" class="govuk-button" data-module="govuk-button">
-        Create new case
-      </button>
-    </form>
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <h2 class="govuk-tabs__title">
+        Contents
+      </h2>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#past-day">
+            Open cases
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#past-week">
+            Closed cases
+          </a>
+        </li>
+      </ul>
+      <!-- TAB 1 -->
+      <div class="govuk-tabs__panel" id="past-day">
+        <table class="govuk-table">
+          <caption class="govuk-visually-hidden">My cases</caption>
+          <p class="govuk-body govuk-hint">Showing 5 of 5 cases</p>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Case ID</th>
+              <th scope="col" class="govuk-table__header">Customer</th>
+              <th scope="col" class="govuk-table__header">Action</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">#12345</td>
+              <td class="govuk-table__cell">Arthur Morgan</td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-summary-list__actions-list">
+                <li class="govuk-summary-list__actions-list-item">
+                  <a class="govuk-link govuk-link--no-visited-state" href="pages/case-details">Open<span class="govuk-visually-hidden"> case 1</span></a>
+                </li>
+              </ul>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">#15646</td>
+              <td class="govuk-table__cell">Arthur Retry</td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-summary-list__actions-list">
+                <li class="govuk-summary-list__actions-list-item">
+                  <a class="govuk-link govuk-link--no-visited-state" href="pages/case-loading-retry">Open<span class="govuk-visually-hidden"> case 2</span></a>
+                </li>
+              </ul>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">#87658</td>
+              <td class="govuk-table__cell">Arthur Manual</td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-summary-list__actions-list">
+                <li class="govuk-summary-list__actions-list-item">
+                  <a class="govuk-link govuk-link--no-visited-state" href="pages/case-loading-error">Open<span class="govuk-visually-hidden"> case 3</span></a>
+                </li>
+              </ul>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">#54332</td>
+              <td class="govuk-table__cell">Arthur Morgan</td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-summary-list__actions-list">
+                <li class="govuk-summary-list__actions-list-item">
+                  <a class="govuk-link govuk-link--no-visited-state" href="pages/case-details">Open<span class="govuk-visually-hidden"> case 4</span></a>
+                </li>
+              </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <nav class="govuk-pagination" aria-label="Pagination">
+          <ul class="govuk-pagination__list">
+            <li class="govuk-pagination__item govuk-pagination__item--current">
+              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+                1
+              </a>
+            </li>
+            <li class="govuk-pagination__item">
+              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+                2
+              </a>
+            </li>
+            <li class="govuk-pagination__item">
+              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+                3
+              </a>
+            </li>
+          </ul>
+          <div class="govuk-pagination__next">
+            <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+              <span class="govuk-pagination__link-title">
+                Next<span class="govuk-visually-hidden"> page</span>
+              </span>
+              <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+              </svg>
+            </a>
+          </div>
+        </nav>
+      </div>
+      <!-- TAB 2 -->
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+        <table class="govuk-table">
+          <caption class="govuk-visually-hidden">My cases</caption>
+          <p class="govuk-body govuk-hint">Showing 5 of 14 cases</p>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Case ID</th>
+              <th scope="col" class="govuk-table__header">Customer</th>
+              <th scope="col" class="govuk-table__header">Closed on</th>
+              <th scope="col" class="govuk-table__header">Action</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">#12345</td>
+              <td class="govuk-table__cell">Arthur Norep1</td>
+              <td class="govuk-table__cell">12/03/2027</td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-summary-list__actions-list">
+                <li class="govuk-summary-list__actions-list-item">
+                  <a class="govuk-link govuk-link--no-visited-state" href="pages/case-details-norep1">Open<span class="govuk-visually-hidden"> case 1</span></a>
+                </li>
+              </ul>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">#15646</td>
+              <td class="govuk-table__cell">Arthur Norep2</td>
+              <td class="govuk-table__cell">11/03/2027</td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-summary-list__actions-list">
+                <li class="govuk-summary-list__actions-list-item">
+                  <a class="govuk-link govuk-link--no-visited-state" href="case-details-norep2">Open<span class="govuk-visually-hidden"> case 2</span></a>
+                </li>
+              </ul>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">#87658</td>
+              <td class="govuk-table__cell">Arthur Morgan</td>
+              <td class="govuk-table__cell">10/03/2027</td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-summary-list__actions-list">
+                <li class="govuk-summary-list__actions-list-item">
+                  <a class="govuk-link govuk-link--no-visited-state" href="pages/case-details">Open<span class="govuk-visually-hidden"> case 3</span></a>
+                </li>
+              </ul>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">#54332</td>
+              <td class="govuk-table__cell">Arthur Morgan</td>
+              <td class="govuk-table__cell">09/03/2027</td>
+              <td class="govuk-table__cell">
+                <ul class="govuk-summary-list__actions-list">
+                <li class="govuk-summary-list__actions-list-item">
+                  <a class="govuk-link govuk-link--no-visited-state" href="pages/case-details">Open<span class="govuk-visually-hidden"> case 4</span></a>
+                </li>
+              </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <nav class="govuk-pagination" aria-label="Pagination">
+          <ul class="govuk-pagination__list">
+            <li class="govuk-pagination__item govuk-pagination__item--current">
+              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+                1
+              </a>
+            </li>
+            <li class="govuk-pagination__item">
+              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+                2
+              </a>
+            </li>
+            <li class="govuk-pagination__item">
+              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+                3
+              </a>
+            </li>
+          </ul>
+          <div class="govuk-pagination__next">
+            <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+              <span class="govuk-pagination__link-title">
+                Next<span class="govuk-visually-hidden"> page</span>
+              </span>
+              <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+              </svg>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
 
   </div>
 </div>
