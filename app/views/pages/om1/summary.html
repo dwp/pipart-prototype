@@ -1,0 +1,90 @@
+{% extends "layouts/tl1-summary-layout.html" %}
+
+{% set pageName="Case details" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third summary-left-panel">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+    </br>
+    </br>
+    <h1 class="govuk-heading-l">
+      OM1 Summary
+    </h1>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Type of OM1
+        </dt>
+        <dd class="govuk-summary-list__value">
+          New claim
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Select OM Reason
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Failure to attend their PIP assessment
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Who do you want to send the OM1 too
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Customer<br><span class="govuk-hint">Arthur Morgan</span>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Please specify a good reason
+        </dt>
+        <dd class="govuk-summary-list__value">
+          For you not attending your face-to-face assessment 
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          What action is required
+        </dt>
+        <dd class="govuk-summary-list__value">
+          We will now continue with your PIP claim, to do this we will contact you to make sure we have all the information we need for your PIP claim
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+        </dd>
+      </div>
+    </dl>
+
+  </div>
+
+  <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0">
+    <div class="pdf-viewer">
+      <div class="pdf-viewer-bar">
+        <img class="pdf-viewer-images" src="/public/images/left.png" alt="left options">
+        <img class="pdf-viewer-images" src="/public/images/middle.png" alt="middle options">
+        <img class="pdf-viewer-images" src="/public/images/right.png" alt="right options">
+      </div>
+      <div class="pdf-viewer-content">
+        <img class="pdf-viewer-example" src="/public/images/example-4.png" alt="pdf example">
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

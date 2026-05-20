@@ -1,0 +1,65 @@
+{% extends "layouts/tl1-layout.html" %}
+
+{% set pageName="Case details" %}
+
+{% block beforeContent %}
+
+  <div class="govuk-width-container">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="action-required" method="post" class="govuk-form-group">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">OM1</span>
+            <h1 class="govuk-fieldset__heading">
+              Please specify a good reason?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="action-required-1" name="action-required" type="radio" value="Reason 1">
+              <label class="govuk-label govuk-radios__label" for="action-required-1">
+                Did not attend assessment
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="action-required-2" name="action-required" type="radio" value="Reason 2">
+              <label class="govuk-label govuk-radios__label" for="action-required-2">
+                Did not comply with assessment requirements
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="action-required-3" name="action-required" type="radio" value="Reason 3">
+              <label class="govuk-label govuk-radios__label" for="action-required-3">
+                Did not return ‘How your disability affects you’ form
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="action-required-4" name="action-required" type="radio" value="Reason 4">
+              <label class="govuk-label govuk-radios__label" for="action-required-4">
+                Did not provide requested information in PIP claim
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button type="submit" class="govuk-button govuk-!-margin-top-7" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

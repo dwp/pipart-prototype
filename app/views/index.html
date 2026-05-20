@@ -25,21 +25,21 @@
       </h2>
       <ul class="govuk-tabs__list">
         <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-          <a class="govuk-tabs__tab" href="#past-day">
+          <a class="govuk-tabs__tab" href="#open-cases-tab">
             Open cases
           </a>
         </li>
         <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab" href="#past-week">
+          <a class="govuk-tabs__tab" href="#closed-cases-tab">
             Closed cases
           </a>
         </li>
       </ul>
       <!-- TAB 1 -->
-      <div class="govuk-tabs__panel" id="past-day">
+      <div class="govuk-tabs__panel" id="open-cases-tab">
         <table class="govuk-table">
           <caption class="govuk-visually-hidden">My cases</caption>
-          <p class="govuk-body govuk-hint">Showing 5 of 5 cases</p>
+          <p class="govuk-body govuk-hint">Showing 5 of 11 cases</p>
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header">Case ID</th>
@@ -125,7 +125,7 @@
         </nav>
       </div>
       <!-- TAB 2 -->
-      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="closed-cases-tab">
         <table class="govuk-table">
           <caption class="govuk-visually-hidden">My cases</caption>
           <p class="govuk-body govuk-hint">Showing 5 of 14 cases</p>
@@ -223,4 +223,5 @@
   </div>
 </div>
 
+<!-- TEST -->
 {% endblock %}

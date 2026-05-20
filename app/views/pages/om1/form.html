@@ -1,0 +1,53 @@
+{% extends "layouts/tl1-layout.html" %}
+
+{% set pageName="Case details" %}
+
+{% block beforeContent %}
+
+  <div class="govuk-width-container">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="om-reason" method="post" class="govuk-form-group">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">OM1</span>
+            <h1 class="govuk-fieldset__heading">
+              Is this a new claim or a reassessment?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-of-om1" name="type-of-om1" type="radio" value="new claim">
+              <label class="govuk-label govuk-radios__label" for="type-of-om1">
+                New claim
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-of-om1-2" name="type-of-om1" type="radio" value="reassessment">
+              <label class="govuk-label govuk-radios__label" for="type-of-om1-2">
+                Reassessment
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button type="submit" class="govuk-button govuk-!-margin-top-7" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
