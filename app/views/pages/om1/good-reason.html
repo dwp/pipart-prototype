@@ -15,7 +15,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="action-required" method="post" class="govuk-form-group">
+    <form action="action-required" name="good-reason-form" method="post" class="govuk-form-group">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
@@ -27,32 +27,49 @@
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="action-required-1" name="action-required" type="radio" value="Reason 1">
-              <label class="govuk-label govuk-radios__label" for="action-required-1">
+              <input class="govuk-radios__input" id="good-reason-1" name="good-reason" type="radio" value="Reason1">
+              <label class="govuk-label govuk-radios__label" for="good-reason-1">
                 Did not attend assessment
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="action-required-2" name="action-required" type="radio" value="Reason 2">
-              <label class="govuk-label govuk-radios__label" for="action-required-2">
+              <input class="govuk-radios__input" id="good-reason-2" name="good-reason" type="radio" value="Reason2">
+              <label class="govuk-label govuk-radios__label" for="good-reason-2">
                 Did not comply with assessment requirements
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="action-required-3" name="action-required" type="radio" value="Reason 3">
-              <label class="govuk-label govuk-radios__label" for="action-required-3">
+              <input class="govuk-radios__input" id="good-reason-3" name="good-reason" type="radio" value="Reason3">
+              <label class="govuk-label govuk-radios__label" for="good-reason-3">
                 Did not return ‘How your disability affects you’ form
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="action-required-4" name="action-required" type="radio" value="Reason 4">
-              <label class="govuk-label govuk-radios__label" for="action-required-4">
+              <input class="govuk-radios__input" id="good-reason-4" name="good-reason" type="radio" value="Reason4">
+              <label class="govuk-label govuk-radios__label" for="good-reason-4">
                 Did not provide requested information in PIP claim
               </label>
             </div>
           </div>
         </fieldset>
       </div>
+
+      <h2 class="govuk-heading-m govuk-!-margin-top-7">Reason preview</h2>
+      <p id="reason-preview-0" class="govuk-body">
+        Please select a good reason to view preview.
+      </p>
+      <p id="reason-preview-1" class="govuk-body" style="display: none;">
+        Good reasons for you not attending your face-to-face assessment.
+      </p>
+      <p id="reason-preview-2" class="govuk-body" style="display: none;">
+        Good reasons for you not complying with requests from the health professional at your face-to-face assessment.
+      </p>
+      <p id="reason-preview-3" class="govuk-body" style="display: none;">
+        Good reasons for you not filling in and returning the 'How your disability affects you' form we sent.
+      </p>
+      <p id="reason-preview-4" class="govuk-body" style="display: none;">
+        Good reasons for you not giving us the information we asked for to decide your PIP claim.
+      </p>
 
       <button type="submit" class="govuk-button govuk-!-margin-top-7" data-module="govuk-button">
         Continue
@@ -62,4 +79,8 @@
   </div>
 </div>
 
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/om1-preview-2.js"></script>
 {% endblock %}

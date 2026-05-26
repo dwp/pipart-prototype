@@ -49,105 +49,108 @@
 
     <br />
 
-    <h2 class="govuk-heading-m">Case documents</h2>
-    <p class="govuk-body">These documents are optional. Only add them if they are relevant to your case.</p>
+    <div id="case-doc-section" style="display: none;">
+      <h2 class="govuk-heading-m">Case documents</h2>
 
+      <table id="case-doc-table" class="govuk-table govuk-table--small-text-until-tablet">
+        <caption class="govuk-visually-hidden">Case documents</caption>
+        
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header" style="width: 25% !important;">Document</th>
+            <th scope="col" class="govuk-table__header" style="width: 25% !important;">Last updated</th>
+            <th scope="col" class="govuk-table__header" style="width: 25% !important;">Status</th>
+            <th scope="col" class="govuk-table__header" style="width: 25% !important;">Action</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row" id="bundle-inprogress-table">
+            <th scope="row" class="govuk-table__header">Bundle</th>
+            
+            <td class="govuk-table__cell">
+              12/03/2026
+            </td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--green">
+                Added
+              </strong>
+            </td>
+            <td class="govuk-table__cell">
+              <ul class="govuk-summary-list__actions-list">
+                <li class="govuk-summary-list__actions-list-item">
+                  <a class="govuk-link govuk-link--no-visited-state" href="#">View<span class="govuk-visually-hidden"> contact details</span></a>
+                </li>
+                <li class="govuk-summary-list__actions-list-item">
+                  <a class="govuk-link govuk-link--no-visited-state" href="#">Remove<span class="govuk-visually-hidden"> contact details</span></a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          {% if (condition) %} 
+            <tr class="govuk-table__row" id="appeal-start-table">
+              <th scope="row" class="govuk-table__header">Appeals response</th>
+              
+              <td class="govuk-table__cell">
+                13/03/2026
+              </td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--blue">
+                  In progress
+                </strong>
+              </td>
+              <td class="govuk-table__cell">
+                <a class="govuk-link govuk-link--no-visited-state" href="appeals-response/appeals-tasklist">Continue<span class="govuk-visually-hidden"> appeals response document</span></a>
+              </td>
+            </tr>
+          {% endif %}
+        </tbody>
+      </table>
+    </div>
 
-    <table class="govuk-table govuk-table--small-text-until-tablet">
-      <caption class="govuk-visually-hidden">Case documents</caption>
-      
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header" style="width: 25% !important;">Document</th>
-          <th scope="col" class="govuk-table__header" style="width: 25% !important;">Last updated</th>
-          <th scope="col" class="govuk-table__header" style="width: 25% !important;">Status</th>
-          <th scope="col" class="govuk-table__header" style="width: 25% !important;">Action</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row" id="bundle-start-table">
-          <th scope="row" class="govuk-table__header">Bundle</th>
-          
-          <td class="govuk-table__cell">
-            -
-          </td>
-          <td class="govuk-table__cell">
-            <strong class="govuk-tag govuk-tag--grey">
-              Not added
-            </strong>
-          </td>
-          <td class="govuk-table__cell">
-            <a class="govuk-link govuk-link--no-visited-state" id="bundle-start-link-table" href="#">Add<span class="govuk-visually-hidden"> bundle document</span></a>
-          </td>
-        </tr>
-        <tr class="govuk-table__row" id="bundle-inprogress-table" style="display: none;">
-          <th scope="row" class="govuk-table__header">Bundle</th>
-          
-          <td class="govuk-table__cell">
-            12/03/2026
-          </td>
-          <td class="govuk-table__cell">
-            <strong class="govuk-tag govuk-tag--green">
-              Added
-            </strong>
-          </td>
-          <td class="govuk-table__cell">
-            <ul class="govuk-summary-list__actions-list">
-              <li class="govuk-summary-list__actions-list-item">
-                <a class="govuk-link govuk-link--no-visited-state" href="#">View<span class="govuk-visually-hidden"> contact details</span></a>
-              </li>
-              <li class="govuk-summary-list__actions-list-item">
-                <a class="govuk-link govuk-link--no-visited-state" href="#">Remove<span class="govuk-visually-hidden"> contact details</span></a>
-              </li>
-            </ul>
-          </td>
-        </tr>
-        <tr class="govuk-table__row" id="appeal-start-table" style="display: none;">
-          <th scope="row" class="govuk-table__header">Appeals response</th>
-          
-          <td class="govuk-table__cell">
-            13/03/2026
-          </td>
-          <td class="govuk-table__cell">
-            <strong class="govuk-tag govuk-tag--blue">
-              In progress
-            </strong>
-          </td>
-          <td class="govuk-table__cell">
-            <a class="govuk-link govuk-link--no-visited-state" href="appeals-response/appeals-tasklist">Continue<span class="govuk-visually-hidden"> appeals response document</span></a>
-          </td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">OM1</th>
-          
-          <td class="govuk-table__cell">
-            -
-          </td>
-          <td class="govuk-table__cell">
-            <strong class="govuk-tag govuk-tag--grey">
-              Not added
-            </strong>
-          </td>
-          <td class="govuk-table__cell">
-            <a class="govuk-link govuk-link--no-visited-state" href="om1/form">Add<span class="govuk-visually-hidden"> OM1 document</span></a>
-          </td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">TL1</th>
-          <td class="govuk-table__cell">
-            -
-          </td>
-          <td class="govuk-table__cell">
-            <strong class="govuk-tag govuk-tag--grey">
-              Not added
-            </strong>
-          </td>
-          <td class="govuk-table__cell">
-            <a class="govuk-link govuk-link--no-visited-state" href="TL1/form">Add<span class="govuk-visually-hidden"> TL1 document</span></a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <h2 class="govuk-heading-m">Available case documents</h2>
+
+    <article aria-label="Sub navigation 1">
+      <section id="bundle-start" class="doc-card govuk-!-margin-top-5">
+        <h3 class="govuk-heading-s">Bundle</h3>
+        <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a id="bundle-start-link" href="#" role="button" draggable="false" class="govuk-button govuk-button--start doc-card-button" data-module="govuk-button">
+          Add
+          <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+          </svg>
+        </a>
+      </section>
+      <section id="appeal-start" style="display: none;" class="doc-card govuk-!-margin-top-5">
+        <h3 class="govuk-heading-s">Appeal response</h3>
+        <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a href="appeals-response/appeals-tasklist" role="button" draggable="false" class="govuk-button govuk-button--start doc-card-button" data-module="govuk-button">
+          Add
+          <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+          </svg>
+        </a>
+      </section>
+      <section class="doc-card govuk-!-margin-top-5">
+        <h3 class="govuk-heading-s">OM1</h3>
+        <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a href="om1/form" role="button" draggable="false" class="govuk-button govuk-button--start doc-card-button" data-module="govuk-button">
+          Add
+          <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+          </svg>
+        </a>
+      </section>
+      <section id="bundle-start" class="doc-card govuk-!-margin-top-5">
+        <h3 class="govuk-heading-s">TL1</h3>
+        <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a id="bundle-start-link" href="TL1/form" role="button" draggable="false" class="govuk-button govuk-button--start doc-card-button" data-module="govuk-button">
+          Add
+          <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+          </svg>
+        </a>
+      </section>
+    </article>
 
   </div>
 </div>

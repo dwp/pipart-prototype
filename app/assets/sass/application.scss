@@ -172,3 +172,15 @@
     display: flex;
   }
 }
+
+.doc-card {
+  background-color: #f3f3f3;
+  border-left: 4px solid #0000;
+  border-left-color: #1d70b8;
+  padding: 20px;
+
+  &-button {
+    margin: 0;
+    font-size: 19px;
+  }
+}

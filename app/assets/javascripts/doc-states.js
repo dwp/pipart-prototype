@@ -1,14 +1,13 @@
 // TABLE
 
-const bundleStartTable = document.getElementById("bundle-start-table");
-const bundleInprogressTable = document.getElementById("bundle-inprogress-table");
-const appealStartTable = document.getElementById("appeal-start-table");
-const bundleStartLinkTable = document.getElementById("bundle-start-link-table");
+const bundleStartAdd = document.getElementById("bundle-start-link");
+const bundleStart = document.getElementById("bundle-start");
+const caseDocSection = document.getElementById("case-doc-section");
+const appealStart = document.getElementById("appeal-start");
 
-bundleStartLinkTable.addEventListener("click", (event) => {
+bundleStartAdd.addEventListener("click", (event) => {
   event.preventDefault();
-  console.log("TEST")
-  bundleStartTable.style.display = 'none';
-  bundleInprogressTable.style.display = 'table-row';
-  appealStartTable.style.display = 'table-row';
+  bundleStart.style.display = 'none';
+  caseDocSection.style.display = 'block';
+  appealStart.style.display = 'block';
 })
