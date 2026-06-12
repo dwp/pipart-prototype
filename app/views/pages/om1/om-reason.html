@@ -15,7 +15,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form name="om1-reason-form" action="send-where" method="post" class="govuk-form-group">
+    <form name="om1-reason-form" action="good-reason" method="post" class="govuk-form-group">
 
       {% if data['type-of-om1'] == "new claim" %}
 
@@ -137,11 +137,14 @@
 
       {% endif %}
 
-      
-
-      <button type="submit" class="govuk-button govuk-!-margin-top-5" data-module="govuk-button">
-        Continue
-      </button>
+      <div class="govuk-button-group govuk-!-margin-top-5">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a href="../case-details" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Save and exit
+        </a>
+      </div>
     </form>
 
   </div>
