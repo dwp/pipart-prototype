@@ -182,5 +182,10 @@
   &-button {
     margin: 0;
     font-size: 19px;
+    background-color: #1D70B8;
+    box-shadow: 0 3px 0 #000;
+    &:hover {
+      background-color: #0f385c;
+    }
   }
 }

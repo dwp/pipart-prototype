@@ -1,0 +1,57 @@
+{% extends "layouts/appeal-layout.html" %}
+
+{% set pageName="Home" %}
+
+{% block beforeContent %}
+
+  <div class="govuk-width-container">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="appeals-tasklist" method="post" class="govuk-form-group">
+
+      <h1 class="govuk-heading-l">
+        <span class="govuk-caption-l">Appeal response</span>
+        Decisions summary
+      </h1>
+
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Decisions
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae dui nunc. Proin enim velit, vestibulum sed ullamcorper sed, luctus vel elit. Aliquam mollis rutrum nibh. Mauris tristique, orci ac mollis dictum, est justo convallis magna, vitae pharetra lacus dui in mauris. Integer nec eleifend purus, gravida mattis dolor. 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> type</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Previous decisions
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae dui nunc. Proin enim velit, vestibulum sed ullamcorper sed, luctus vel elit. Aliquam mollis rutrum nibh. Mauris tristique, orci ac mollis dictum, est justo convallis magna, vitae pharetra lacus dui in mauris. Integer nec eleifend purus, gravida mattis dolor.
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> type</span></a>
+          </dd>
+        </div>
+      </dl>
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Submit
+      </button>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

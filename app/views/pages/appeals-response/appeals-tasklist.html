@@ -5,7 +5,7 @@
 {% block beforeContent %}
 
   <div class="govuk-width-container">
-    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+    <a href="javascript:history.back()" class="govuk-back-link">Return to case details</a>
   </div>
 
 {% endblock %}
@@ -32,18 +32,6 @@
       </li>
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-link--no-visited-state govuk-task-list__link" href="appeals-schedule" aria-describedby="tasklist-2">
-            Schedule of events
-          </a>
-        </div>
-        <div class="govuk-task-list__status" id="tasklist-2">
-          <strong class="govuk-tag govuk-tag--blue">
-            Not started
-          </strong>
-        </div>
-      </li>
-      <li class="govuk-task-list__item govuk-task-list__item--with-link">
-        <div class="govuk-task-list__name-and-hint">
           <a class="govuk-link govuk-link--no-visited-state govuk-task-list__link" href="appeals-illness" aria-describedby="tasklist-3-hint tasklist-3">
             Illness and disabilities
           </a>
@@ -56,7 +44,7 @@
       </li>
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-link--no-visited-state govuk-task-list__link" href="appeals-facts" aria-describedby="tasklist-4">
+          <a class="govuk-link govuk-link--no-visited-state govuk-task-list__link" href="appeals-no-facts" aria-describedby="tasklist-4">
             Facts of the case
           </a>
         </div>
@@ -69,7 +57,7 @@
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
           <a class="govuk-link govuk-link--no-visited-state govuk-task-list__link" href="appeals-decision" aria-describedby="tasklist-5">
-            Decision under appeal
+            Decisions
           </a>
         </div>
         <div class="govuk-task-list__status" id="tasklist-5">
@@ -80,7 +68,7 @@
       </li>
       <li class="govuk-task-list__item govuk-task-list__item--with-link">
         <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-link--no-visited-state govuk-task-list__link" href="appeals-issues-raised" aria-describedby="tasklist-5">
+          <a class="govuk-link govuk-link--no-visited-state govuk-task-list__link" href="appeals-issues-raised-0" aria-describedby="tasklist-5">
             Issues raised by the appeal
           </a>
         </div>
@@ -103,11 +91,15 @@
         </div>
       </li>
     </ul>
-
     <form action="summary" method="post" class="govuk-form-group">
-      <button type="submit" class="govuk-button" data-module="govuk-button">
-        Continue
-      </button>
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a href="#" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Delete data and refresh data from PIPCS
+        </a>
+      </div>
     </form>
 
   </div>

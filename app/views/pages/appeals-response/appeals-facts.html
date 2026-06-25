@@ -201,7 +201,7 @@
           </td>
           <td class="govuk-table__cell facts-table-cell">07/07/2025</td>
           <td class="govuk-table__cell facts-table-cell">Lorem ipsum dolor amet, consectetur adiping el...</td>
-          <td class="govuk-table__cell facts-table-cell">Reconsideration</td>
+          <td class="govuk-table__cell facts-table-cell">Manual entry</td>
           <td class="govuk-table__cell facts-table-cell">Included</td>
           <td class="govuk-table__cell facts-table-cell">
             <a href="appeals-fact-details" class="govuk-link govuk-link--no-visited-state">Open</a>
@@ -488,6 +488,10 @@
       </button>
     </div>
 
+    <p class="govuk-body-l">
+      <a class="govuk-link govuk-link--no-visited-state" href="appeals-fact-details-new">Add new fact</a>
+    </p>
+
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
     <p class="govuk-body-l">3 of 34 reviewed</p>
@@ -495,9 +499,11 @@
     <form action="appeals-facts-summary" method="post" class="govuk-form-group">
       <div class="govuk-button-group">
         <button type="submit" class="govuk-button" data-module="govuk-button">
-          Finish
+          Continue
         </button>
-        <a class="govuk-link govuk-link--no-visited-state govuk-!-margin-left-3" href="appeals-fact-details-new">Add new fact</a>
+        <a href="#" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Save and exit
+        </a>
       </div>
     </form>
 

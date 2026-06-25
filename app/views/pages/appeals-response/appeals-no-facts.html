@@ -1,0 +1,48 @@
+{% extends "layouts/appeal-layout.html" %}
+
+{% set pageName="Home" %}
+
+{% block beforeContent %}
+
+  <div class="govuk-width-container">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      <span class="govuk-caption-l">Appeal response</span>
+      Facts of the case
+    </h1>
+
+    <p class="govuk-body">
+      There are no facts for this case yet.
+    </p>
+
+    <p class="govuk-body">
+      Add a fact to continue.
+    </p>
+
+    <form action="appeals-fact-details-new" method="post" class="govuk-form-group">
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Add a fact
+        </button>
+        <a href="#" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Save and exit
+        </a>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/facts.js"></script>
+{% endblock %}

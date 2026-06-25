@@ -56,11 +56,11 @@
       </fieldset>
     </div>
 
-    <div class="govuk-form-group">
+    <div class="govuk-form-group govuk-!-margin-bottom-0">
       <label class="govuk-label" for="original-text">
-        Original text
+        Fact text
       </label>
-      <textarea class="govuk-textarea" id="original-text" name="originalText" rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum fringilla magna, vel semper orci maximus non. Suspendisse mollis, enim eu efficitur tempor
+      <textarea class="govuk-textarea govuk-!-margin-bottom-2" id="original-text" name="originalText" rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum fringilla magna, vel semper orci maximus non. Suspendisse mollis, enim eu efficitur tempor
 
 neque eros placerat urna, sit amet vehicula neque magna quis ipsum. Cras semper est elit, et tincidunt ligula dignissim quis. Cras tristique lectus ut sem posuere
 
@@ -71,9 +71,20 @@ hendrerit ultrices lorem congue. Vivamus id massa facilisis, semper turpis egest
 scelerisque lorem. Nulla et lacus vitae nulla convallis egestas.</textarea>
     </div>
 
-    <button id="generate-text-btn" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    <p class="govuk-body govuk-!-margin-bottom-0">
+      <a href="#" class="govuk-link">Reset to orginal text</a>
+    </p>
+
+    <br />
+
+    <button id="generate-text-btn" type="submit" class="govuk-button govuk-button--secondary govuk-!-margin-top-4" data-module="govuk-button">
       Generate and use an AI summary
     </button>
+
+    <div id="generated-summary-loading" class="loading-container" style="display: none;">
+      <div class="loading" aria-live="polite" role="status"></div>
+      <p class="govuk-body loading-text govuk-!-font-weight-bold">Generating summary, please wait.</p>
+    </div>
 
     <div class="govuk-form-group" id="generated-summary-form" style="display: none;">
       <label class="govuk-label" for="generated-summary">
@@ -130,6 +141,12 @@ scelerisque lorem. Nulla et lacus vitae nulla convallis egestas.</textarea>
             </div>
           </div>
         </fieldset>
+      </div>
+      <div id="schedule-text" class="govuk-form-group" style="display: none;">
+        <label class="govuk-label" for="event-name">
+          Name of schedule of event
+        </label>
+        <input class="govuk-input" id="event-name" name="eventName" type="text">
       </div>
     </div>
     

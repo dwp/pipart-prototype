@@ -26,7 +26,7 @@
       <input class="govuk-input" id="hmcts-ref" name="hmctsRef" type="text">
     </div>
 
-    <form action="case-details-customer-only" method="post" class="govuk-form-group">
+    <form action="case-details-customer-only" id="new-details-form" method="post" class="govuk-form-group">
       <div class="govuk-form-group">
         <label class="govuk-label" for="sort">
           Title/Pronouns
@@ -120,11 +120,15 @@
           </label>
           <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="addressCounty" type="text">
         </div>
-        <div class="govuk-form-group">
+        <div class="govuk-form-group" id="postcode-group">
           <label class="govuk-label" for="address-postcode">
             Postcode
           </label>
-          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code" value="">
+          <span id="postcode-error" class="govuk-error-message" style="display:none;">
+            <span class="govuk-visually-hidden">Error:</span>
+            This service only supports UK addresses
+          </span>
+          <input id="postcode" class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code" value="">
         </div>
       </fieldset>
 
@@ -156,4 +160,8 @@
   </div>
 </div>
 
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/address-check.js"></script>
 {% endblock %}

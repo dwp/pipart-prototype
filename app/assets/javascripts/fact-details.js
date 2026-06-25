@@ -1,15 +1,26 @@
 const generateTextBtn = document.getElementById("generate-text-btn");
 const originalText= document.getElementById("original-text");
 const generatedSummary= document.getElementById("generated-summary-form");
+const generatedLoading= document.getElementById("generated-summary-loading");
 const generatedSummaryDelete = document.getElementById("generated-summary-delete");
 const reviewFact = document.getElementById("reviewFact");
 const reviewFact2 = document.getElementById("reviewFact-2");
 const includeScheduleBox = document.getElementById("include-schedule-box");
+const checkbox = document.getElementById("include-schedule");
+const scheduleText = document.getElementById("schedule-text");
+
 
 generateTextBtn.addEventListener("click", (event) => {
-  generatedSummary.style.display = 'block';
+  generatedLoading.style.display = 'block';
   generateTextBtn.style.display = 'none';
   originalText.disabled = true;
+
+
+  setTimeout(() => {
+    generatedLoading.style.display = 'none';
+    generatedSummary.style.display = 'block';
+  }, 4000);
+
 })
 
 generatedSummaryDelete.addEventListener("click", (event) => {
@@ -26,3 +37,12 @@ reviewFact.addEventListener("click", (event) => {
 reviewFact2.addEventListener("click", (event) => {
   includeScheduleBox.style.display = 'none';
 })
+
+
+checkbox.addEventListener("change", () => {
+  if (checkbox.checked) {
+    scheduleText.style.display = "block";
+  } else {
+    scheduleText.style.display = "none";
+  }
+});
