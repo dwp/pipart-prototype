@@ -2,22 +2,39 @@
 
 {% set pageName="Home" %}
 
+{% block beforeContent %}
+
+  <div class="home-blue-banner">
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <span class="govuk-caption-l home-blue-banner-font">Newcastle Upon Tyne</span>
+          <h1 class="govuk-heading-l home-blue-banner-font">
+            Hello John Marston
+          </h1>
+
+          <p class="govuk-body home-blue-banner-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lobortis arcu vel ex convallis interdum.</p>
+
+          <a type="submit" href="pages/new-case" role="button" draggable="false" class="govuk-button govuk-button--start govuk-button--inverse" data-module="govuk-button">
+            Create new case
+            <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
-    <span class="govuk-caption-l">Newcastle Upon Tyne</span>
-    <h1 class="govuk-heading-l">
+    <h2 class="govuk-heading-m">
       My cases
-    </h1>
-
-    <a type="submit" href="pages/new-case" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-      Create new case
-      <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
-        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-      </svg>
-    </a>
+    </h2>
 
     <div class="govuk-tabs" data-module="govuk-tabs">
       <h2 class="govuk-tabs__title">
@@ -44,6 +61,7 @@
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header">Case ID</th>
               <th scope="col" class="govuk-table__header">Customer</th>
+              <th scope="col" class="govuk-table__header">Expiry</th>
               <th scope="col" class="govuk-table__header">Action</th>
             </tr>
           </thead>
@@ -51,6 +69,7 @@
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">#12345</td>
               <td class="govuk-table__cell">Arthur Morgan</td>
+              <td class="govuk-table__cell">12/07/2026</td>
               <td class="govuk-table__cell">
                 <ul class="govuk-summary-list__actions-list">
                 <li class="govuk-summary-list__actions-list-item">
@@ -62,6 +81,7 @@
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">#15646</td>
               <td class="govuk-table__cell">Arthur Retry</td>
+              <td class="govuk-table__cell">14/07/2026</td>
               <td class="govuk-table__cell">
                 <ul class="govuk-summary-list__actions-list">
                 <li class="govuk-summary-list__actions-list-item">
@@ -73,6 +93,7 @@
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">#87658</td>
               <td class="govuk-table__cell">Arthur Manual</td>
+              <td class="govuk-table__cell">15/07/2026</td>
               <td class="govuk-table__cell">
                 <ul class="govuk-summary-list__actions-list">
                 <li class="govuk-summary-list__actions-list-item">
@@ -84,6 +105,7 @@
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">#54332</td>
               <td class="govuk-table__cell">Arthur Morgan</td>
+              <td class="govuk-table__cell">16/07/2026</td>
               <td class="govuk-table__cell">
                 <ul class="govuk-summary-list__actions-list">
                 <li class="govuk-summary-list__actions-list-item">
