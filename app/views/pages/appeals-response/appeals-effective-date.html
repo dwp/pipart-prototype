@@ -1,0 +1,162 @@
+{% extends "layouts/appeal-layout.html" %}
+
+{% set pageName="Home" %}
+
+{% block beforeContent %}
+
+  <div class="govuk-width-container">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="appeals-appeal-date" method="post" class="govuk-form-group">
+
+      <h1 class="govuk-heading-l">
+        <span class="govuk-caption-l">Appeal response</span>
+        Decision effective date
+      </h1>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="outcome-hint">
+          <legend class="govuk-fieldset__legend">
+            Date of outcome decision
+          </legend>
+          <div id="outcome-hint" class="govuk-hint">
+            For example, 27 3 2027
+          </div>
+          <div class="govuk-date-input" id="outcome">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="outcome-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="outcome-day" name="outcome-day" type="text" inputmode="numeric" value="12" disabled>
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="outcome-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="outcome-month" name="outcome-month" type="text" inputmode="numeric" value="04" disabled>
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="outcome-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="outcome-year" name="outcome-year" type="text" inputmode="numeric" value="2027" disabled>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="reconsideration-hint">
+          <legend class="govuk-fieldset__legend">
+            Date of reconsideration decision
+          </legend>
+          <div id="reconsideration-hint" class="govuk-hint">
+            For example, 27 3 2027
+          </div>
+          <div class="govuk-date-input" id="reconsideration">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="reconsideration-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="reconsideration-day" name="reconsideration-day" type="text" inputmode="numeric" value="15" disabled>
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="reconsideration-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="reconsideration-month" name="reconsideration-month" type="text" inputmode="numeric" value="05" disabled>
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="reconsideration-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="reconsideration-year" name="reconsideration-year" type="text" inputmode="numeric" value="2027" disabled>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="appeal-request-hint">
+          <legend class="govuk-fieldset__legend">
+            Date of appeal request
+          </legend>
+          <div id="appeal-request-hint" class="govuk-hint">
+            For example, 27 3 2027
+          </div>
+          <div class="govuk-date-input" id="appeal-request">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="appeal-request-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="appeal-request-day" name="appeal-request-day" type="text" inputmode="numeric" value="20" disabled>
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="appeal-request-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="appeal-request-month" name="appeal-request-month" type="text" inputmode="numeric" value="05" disabled>
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="appeal-request-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="appeal-request-year" name="appeal-request-year" type="text" inputmode="numeric" value="2027" disabled>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <p class="govuk-body" id="change-dates"><a class="govuk-link govuk-link--no-visited-state" href="#">Change dates</a></p>
+      <p class="govuk-body" id="revert-dates" style="display: none;"><a class="govuk-link govuk-link--no-visited-state" href="#" id="change-dates">Revert to original dates</a></p>
+
+      <div class="govuk-inset-text">
+        These dates have been pulled from PIPCS, changes won't be updated in PIPCS.
+      </div>
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a href="#" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Save and exit
+        </a>
+        <a href="#" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Delete all data and refresh from PIPCS
+        </a>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/change-dates.js"></script>
+{% endblock %}

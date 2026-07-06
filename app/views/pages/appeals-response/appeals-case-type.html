@@ -1,0 +1,87 @@
+{% extends "layouts/appeal-layout.html" %}
+
+{% set pageName="Home" %}
+
+{% block beforeContent %}
+
+  <div class="govuk-width-container">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="appeals-decision-assist" method="post" class="govuk-form-group">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">Appeal response</span>
+            <h1 class="govuk-fieldset__heading">
+              Type of appeal
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-of-om1-1" name="type-of-om1" type="radio" value="Administrative Exercise">
+              <label class="govuk-label govuk-radios__label" for="type-of-om1">
+                Administrative Exercise
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-of-om1-2" name="type-of-om1" type="radio" value="Award Review">
+              <label class="govuk-label govuk-radios__label" for="type-of-om1-2">
+                Award Review
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-of-om1-3" name="type-of-om1" type="radio" value="Change of Circumstances">
+              <label class="govuk-label govuk-radios__label" for="type-of-om1">
+                Change of Circumstances
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-of-om1-4" name="type-of-om1" type="radio" value="End of Award Reclaim">
+              <label class="govuk-label govuk-radios__label" for="type-of-om1-2">
+                End of Award Reclaim
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-of-om1-5" name="type-of-om1" type="radio" value="New Claim">
+              <label class="govuk-label govuk-radios__label" for="type-of-om1">
+                New Claim
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-of-om1-6" name="type-of-om1" type="radio" value="Reassessment Claim">
+              <label class="govuk-label govuk-radios__label" for="type-of-om1-2">
+                Reassessment Claim
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-of-om1-7" name="type-of-om1" type="radio" value="Negative determinations">
+              <label class="govuk-label govuk-radios__label" for="type-of-om1">
+                Negative determinations
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a href="#" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Save and exit
+        </a>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

@@ -4,17 +4,6 @@
 
 {% block beforeContent %}
 
-  <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="../case-details">Case details</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="appeals-tasklist">Appeals response</a>
-      </li>
-    </ol>
-  </nav>
-
   <div class="govuk-width-container">
     <a href="javascript:history.back()" class="govuk-back-link">Back</a>
   </div>
@@ -25,28 +14,34 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form action="appeals-case-details-2" method="post" class="govuk-form-group">
+    <form action="appeals-tasklist" method="post" class="govuk-form-group">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <span class="govuk-caption-l">Appeal response</span>
             <h1 class="govuk-fieldset__heading">
-              Type of appeal
+              <span class="govuk-caption-l">Appeal response</span>
+              Which is the decision under appeal date?
             </h1>
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="type-of-om1" name="type-of-om1" type="radio" value="new claim">
-              <label class="govuk-label govuk-radios__label" for="type-of-om1">
-                New claim
+              <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
+              <label class="govuk-label govuk-radios__label" for="signIn">
+                Date of Outcome Decision
               </label>
+              <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                15/05/2027
+              </div>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="type-of-om1-2" name="type-of-om1" type="radio" value="reassessment">
-              <label class="govuk-label govuk-radios__label" for="type-of-om1-2">
-                Reassessment
+              <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+              <label class="govuk-label govuk-radios__label" for="signIn-2">
+                Date of Reconsideration Decision
               </label>
+              <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+                20/05/2027
+              </div>
             </div>
           </div>
         </fieldset>
