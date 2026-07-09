@@ -8,7 +8,6 @@ const router = govukPrototypeKit.requests.setupRouter()
 
 // Add your routes here
 
-// Run this code when a form is submitted to 'juggling-balls-answer'
 router.post('/gfs-answer', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
@@ -21,6 +20,21 @@ router.post('/gfs-answer', function (req, res) {
   } else {
     // Send user to ineligible page
     res.redirect('/pages/appeals-response/appeals-issues-raised-2')
+  }
+
+})
+
+router.post('/another-benefits', function (req, res) {
+
+  var benefitsAnswer = req.session.data['another-benefit']
+
+  // Check whether the variable matches a condition
+  if (benefitsAnswer == "Yes"){
+    // Send user to next page
+    res.redirect('/pages/appeals-response/appeals-benefit-answer')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/pages/appeals-response/appeals-case-summary')
   }
 
 })

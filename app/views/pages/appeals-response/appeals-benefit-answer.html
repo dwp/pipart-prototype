@@ -1,0 +1,153 @@
+{% extends "layouts/appeal-layout.html" %}
+
+{% set pageName="Home" %}
+
+{% block beforeContent %}
+
+  <div class="govuk-width-container">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form name="second-benefit" action="appeals-case-summary" method="post" class="govuk-form-group">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              <span class="govuk-caption-l">Appeal response</span>
+              What is the other benefit?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="benefit-answer-1" name="benefit-answer" type="radio" value="Carers" aria-describedby="benefit-answer-item-hint">
+              <label class="govuk-label govuk-radios__label" for="benefit-answer-1">
+                Carers
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="benefit-answer-2" name="benefit-answer" type="radio" value="Carers - no print out" aria-describedby="benefit-answer-2-item-hint">
+              <label class="govuk-label govuk-radios__label" for="benefit-answer-2">
+                Carers - no print out
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="benefit-answer-3" name="benefit-answer" type="radio" value="Carers - benefit and rate details" aria-describedby="benefit-answer-item-hint">
+              <label class="govuk-label govuk-radios__label" for="benefit-answer-3">
+                Carers - benefit and rate details
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="benefit-answer-4" name="benefit-answer" type="radio" value="ESA" aria-describedby="benefit-answer-2-item-hint">
+              <label class="govuk-label govuk-radios__label" for="benefit-answer-4">
+                ESA
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="benefit-answer-5" name="benefit-answer" type="radio" value="ESA old evidence" aria-describedby="benefit-answer-2-item-hint">
+              <label class="govuk-label govuk-radios__label" for="benefit-answer-5">
+                ESA old evidence
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="benefit-answer-6" name="benefit-answer" type="radio" value="ESA report used - 3" aria-describedby="benefit-answer-item-hint">
+              <label class="govuk-label govuk-radios__label" for="benefit-answer-6">
+                ESA report used - 3
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="benefit-answer-7" name="benefit-answer" type="radio" value="ESA Work Related Activity" aria-describedby="benefit-answer-2-item-hint">
+              <label class="govuk-label govuk-radios__label" for="benefit-answer-7">
+                ESA Work Related Activity
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="benefit-answer-8" name="benefit-answer" type="radio" value="UC" aria-describedby="benefit-answer-2-item-hint">
+              <label class="govuk-label govuk-radios__label" for="benefit-answer-8">
+                UC
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="benefit-answer-9" name="benefit-answer" type="radio" value="UC old evidence" aria-describedby="benefit-answer-2-item-hint">
+              <label class="govuk-label govuk-radios__label" for="benefit-answer-9">
+                UC old evidence
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="benefit-answer-10" name="benefit-answer" type="radio" value="UC report used - 3" aria-describedby="benefit-answer-item-hint">
+              <label class="govuk-label govuk-radios__label" for="benefit-answer-10">
+                UC report used - 3
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="benefit-answer-11" name="benefit-answer" type="radio" value="UC Work Related Activity" aria-describedby="benefit-answer-2-item-hint">
+              <label class="govuk-label govuk-radios__label" for="benefit-answer-11">
+                UC Work Related Activity
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <h2 class="govuk-heading-m govuk-!-margin-top-7">Benefit preview</h2>
+      <p id="benefit-preview-0" class="govuk-body">
+        Please select a benefit to view preview.
+      </p>
+      <p id="benefit-preview-1" class="govuk-body" style="display: none;">
+        Although [Title] [Surname] has identified a high level of personal restriction, [he she] [Select is,was] entitled to Carer's Allowance (see Page [Page No]). To be entitled to Carer's Allowance a person must provide at least 35 hours of care to another disabled person each week. The Tribunal may wish to explore this further.
+      </p>
+      <p id="benefit-preview-2" class="govuk-body" style="display: none;">
+        Although [Title] [Surname] has identified a high level of personal restriction, [he she] [Select is,was] entitled to Carer's Allowance. To be entitled to Carer's Allowance a person must provide at least 35 hours of care to another disabled person each week. The Tribunal may wish to explore this further.
+      </p>
+      <p id="benefit-preview-3" class="govuk-body" style="display: none;">
+        Although [Title] [Surname] has identified a high level of personal restriction, [he she] [Select is,was] entitled to Carer's Allowance (see Page [Page No]) and cares for somebody who is entitled to the [Select Carers Allowance related rate] of [Select Carers Allowance related benefit]. To be entitled to Carer's Allowance a person must provide at least 35 hours of care to another disabled person each week. The Tribunal may wish to explore this further.
+      </p>
+      <p id="benefit-preview-4" class="govuk-body" style="display: none;">
+        Although [Title] [Surname] [Select is,was] entitled to ESA, this doesn't bring automatic entitlement to PIP, which is assessed separately and under different criteria. ESA assesses fitness to work. This factor isn't relevant to the PIP qualifying criteria. The recent relevant PIP evidence shows [Title] [Surname] has the functional ability to carry out the PIP daily living and mobility activities as reflected in the decision under appeal.
+      </p>
+      <p id="benefit-preview-5" class="govuk-body" style="display: none;">
+        PIP and ESA have different entitlement conditions. Although [Title] [Surname] [Select is,was] entitled to ESA, the ESA evidence is over [number] [Select years,months] old and the recent PIP evidence shows [Title] [Surname] has the functional ability to carry out all daily living and mobility activities shown in the decision under appeal. I agree with all descriptors selected.
+      </p>
+      <p id="benefit-preview-6" class="govuk-body" style="display: none;">
+        An Employment and Support Allowance (ESA) report was used to make this decision. While the examination isn't specifically for assessing PIP entitlement, it provides valuable information about the claimant's typical day and a health care professional's opinion on functional ability based on observations of the claimant and knowledge of their medical conditions. Although the report was used as part of the evidence to assess [Title] [Surname], entitlement to ESA alone brings no automatic entitlement to PIP, which is assessed separately and under different criteria.
+      </p>
+      <p id="benefit-preview-7" class="govuk-body" style="display: none;">
+        Although [Title] [Surname] [Select is,was] entitled to ESA and [Select is,was] in the Work Related Activity Group, this doesn't bring automatic entitlement to PIP, which is assessed separately and under different criteria. ESA assesses fitness to work. This factor isn't relevant to the PIP qualifying criteria. The recent relevant PIP evidence shows [Title] [Surname] has the functional ability to carry out the PIP daily living and mobility activities as reflected in the decision under appeal.
+      </p>
+      <p id="benefit-preview-8" class="govuk-body" style="display: none;">
+        Although [Title] [Surname] [Select is,was] entitled to Universal Credit (UC), this doesn't bring automatic entitlement to PIP, which is assessed separately and under different criteria. UC assesses fitness to work. This factor isn't relevant to the PIP qualifying criteria. The recent relevant PIP evidence shows [Title] [Surname] has the functional ability to carry out the PIP daily living and mobility activities as reflected in the decision under appeal.
+      </p>
+      <p id="benefit-preview-9" class="govuk-body" style="display: none;">
+        PIP and Universal Credit (UC) have different entitlement conditions. Although [Title] [Surname] [Select is,was] entitled to UC, the UC evidence is over [number] [Select years/months] old and the recent PIP evidence shows [Title] [Surname] has the functional ability to carry out all daily living and mobility activities shown in the decision under appeal. I agree with all descriptors selected.
+      </p>
+      <p id="benefit-preview-10" class="govuk-body" style="display: none;">
+        A Universal Credit (UC) report was used to make this decision. While the examination isn't specifically for assessing PIP entitlement, it provides valuable information about the claimant's typical day and a health care professional's opinion on functional ability based on observations of the claimant and knowledge of their medical conditions. Although the report was used as part of the evidence to assess [Title] [Surname], entitlement to UC alone brings no automatic entitlement to PIP, which is assessed separately and under different criteria
+      </p>
+      <p id="benefit-preview-11" class="govuk-body" style="display: none;">
+        Although [Title] [Surname] [Select is,was] entitled to Universal Credit (UC) and [Select is,was] in the Work Related Activity Group, this doesn't bring automatic entitlement to PIP, which is assessed separately and under different criteria. UC assesses fitness to work. This factor isn't relevant to the PIP qualifying criteria. The recent relevant PIP evidence shows [Title] [Surname] has the functional ability to carry out the PIP daily living and mobility activities as reflected in the decision under appeal.
+      </p>
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a href="#" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Save and exit
+        </a>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/benefit-preview.js"></script>
+{% endblock %}

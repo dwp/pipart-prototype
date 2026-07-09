@@ -42,19 +42,13 @@
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="status" name="status" type="checkbox" value="carcasses">
                 <label class="govuk-label govuk-checkboxes__label" for="status">
-                  Not started
+                  Not included
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="mines">
                 <label class="govuk-label govuk-checkboxes__label" for="status-2">
                   Included
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="status-3" name="status" type="checkbox" value="farm">
-                <label class="govuk-label govuk-checkboxes__label" for="status-3">
-                  Rejected
                 </label>
               </div>
             </div>
@@ -68,6 +62,12 @@
               Source
             </legend>
             <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="source" name="source" type="checkbox" value="carcasses">
+                <label class="govuk-label govuk-checkboxes__label" for="source">
+                  Manual entry
+                </label>
+              </div>
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="source" name="source" type="checkbox" value="carcasses">
                 <label class="govuk-label govuk-checkboxes__label" for="source">
@@ -254,7 +254,7 @@
           <td class="govuk-table__cell facts-table-cell">13/07/2025</td>
           <td class="govuk-table__cell facts-table-cell">Lorem ipsum dolor amet, consectetur adiping el...</td>
           <td class="govuk-table__cell facts-table-cell">MR Decisions</td>
-          <td class="govuk-table__cell facts-table-cell">Rejected</td>
+          <td class="govuk-table__cell facts-table-cell">Not included</td>
           <td class="govuk-table__cell facts-table-cell">
             <a href="appeals-fact-details" class="govuk-link govuk-link--no-visited-state">Open</a>
           </td>
@@ -280,7 +280,7 @@
           <td class="govuk-table__cell facts-table-cell">17/07/2025</td>
           <td class="govuk-table__cell facts-table-cell">Lorem ipsum dolor amet, consectetur adiping el...</td>
           <td class="govuk-table__cell facts-table-cell">MR Decisions</td>
-          <td class="govuk-table__cell facts-table-cell">Not started</td>
+          <td class="govuk-table__cell facts-table-cell">Not included</td>
           <td class="govuk-table__cell facts-table-cell">
             <a href="appeals-fact-details" class="govuk-link govuk-link--no-visited-state">Review</a>
           </td>
@@ -306,7 +306,7 @@
           <td class="govuk-table__cell facts-table-cell">20/07/2025</td>
           <td class="govuk-table__cell facts-table-cell">Lorem ipsum dolor amet, consectetur adiping el...</td>
           <td class="govuk-table__cell facts-table-cell">MR Decisions</td>
-          <td class="govuk-table__cell facts-table-cell">Not started</td>
+          <td class="govuk-table__cell facts-table-cell">Not included</td>
           <td class="govuk-table__cell facts-table-cell">
             <a href="appeals-fact-details" class="govuk-link govuk-link--no-visited-state">Review</a>
           </td>
@@ -332,7 +332,7 @@
           <td class="govuk-table__cell facts-table-cell">21/07/2025</td>
           <td class="govuk-table__cell facts-table-cell">Lorem ipsum dolor amet, consectetur adiping el...</td>
           <td class="govuk-table__cell facts-table-cell">MR Decisions</td>
-          <td class="govuk-table__cell facts-table-cell">Not started</td>
+          <td class="govuk-table__cell facts-table-cell">Not included</td>
           <td class="govuk-table__cell facts-table-cell">
             <a href="appeals-fact-details" class="govuk-link govuk-link--no-visited-state">Review</a>
           </td>
@@ -358,7 +358,7 @@
           <td class="govuk-table__cell facts-table-cell">24/07/2025</td>
           <td class="govuk-table__cell facts-table-cell">Lorem ipsum dolor amet, consectetur adiping el...</td>
           <td class="govuk-table__cell facts-table-cell">MR Decisions</td>
-          <td class="govuk-table__cell facts-table-cell">Not started</td>
+          <td class="govuk-table__cell facts-table-cell">Not included</td>
           <td class="govuk-table__cell facts-table-cell">
             <a href="appeals-fact-details" class="govuk-link govuk-link--no-visited-state">Review</a>
           </td>
@@ -384,7 +384,7 @@
           <td class="govuk-table__cell facts-table-cell">25/07/2025</td>
           <td class="govuk-table__cell facts-table-cell">Lorem ipsum dolor amet, consectetur adiping el...</td>
           <td class="govuk-table__cell facts-table-cell">MR Decisions</td>
-          <td class="govuk-table__cell facts-table-cell">Not started</td>
+          <td class="govuk-table__cell facts-table-cell">Not included</td>
           <td class="govuk-table__cell facts-table-cell">
             <a href="appeals-fact-details" class="govuk-link govuk-link--no-visited-state">Review</a>
           </td>
@@ -410,7 +410,7 @@
           <td class="govuk-table__cell facts-table-cell">26/07/2025</td>
           <td class="govuk-table__cell facts-table-cell">Lorem ipsum dolor amet, consectetur adiping el...</td>
           <td class="govuk-table__cell facts-table-cell">MR Decisions</td>
-          <td class="govuk-table__cell facts-table-cell">Not started</td>
+          <td class="govuk-table__cell facts-table-cell">Not included</td>
           <td class="govuk-table__cell facts-table-cell">
             <a href="appeals-fact-details" class="govuk-link govuk-link--no-visited-state">Review</a>
           </td>
@@ -436,7 +436,7 @@
           <td class="govuk-table__cell facts-table-cell">27/07/2025</td>
           <td class="govuk-table__cell facts-table-cell">Lorem ipsum dolor amet, consectetur adiping el...</td>
           <td class="govuk-table__cell facts-table-cell">MR Decisions</td>
-          <td class="govuk-table__cell facts-table-cell">Not started</td>
+          <td class="govuk-table__cell facts-table-cell">Not included</td>
           <td class="govuk-table__cell facts-table-cell">
             <a href="appeals-fact-details" class="govuk-link govuk-link--no-visited-state">Review</a>
           </td>
@@ -483,9 +483,6 @@
       <button type="submit" id="facts-multi-include" class="govuk-button govuk-button--secondary" data-module="govuk-button" disabled>
         Include selected
       </button>
-      <button type="submit" id="facts-multi-reject" class="govuk-button govuk-button--warning" data-module="govuk-button" disabled>
-        Reject selected
-      </button>
     </div>
 
     <p class="govuk-body-l">
@@ -494,7 +491,7 @@
 
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-    <p class="govuk-body-l">3 of 34 reviewed</p>
+    <p class="govuk-body-l">3 of 34 included</p>
 
     <form action="appeals-facts-summary" method="post" class="govuk-form-group">
       <div class="govuk-button-group">

@@ -15,7 +15,6 @@ generateTextBtn.addEventListener("click", (event) => {
   generateTextBtn.style.display = 'none';
   originalText.disabled = true;
 
-
   setTimeout(() => {
     generatedLoading.style.display = 'none';
     generatedSummary.style.display = 'block';
@@ -32,10 +31,6 @@ generatedSummaryDelete.addEventListener("click", (event) => {
 
 reviewFact.addEventListener("click", (event) => {
   includeScheduleBox.style.display = 'block';
-})
-
-reviewFact2.addEventListener("click", (event) => {
-  includeScheduleBox.style.display = 'none';
 })
 
 
