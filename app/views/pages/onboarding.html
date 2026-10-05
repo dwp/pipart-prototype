@@ -1,0 +1,51 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+    <h1 class="govuk-heading-l">Agent onboarding</h1>
+
+    <form action="#" method="post" class="govuk-form-group">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label">Full name</label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="full-name" name="full-name" type="text" autocomplete="name">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="office-location">
+          Office location
+        </label>
+        <select class="govuk-select" id="office-location" name="office-location">
+          <option value="">Select an office</option>
+          <option>London</option>
+          <option>Manchester</option>
+          <option>Birmingham</option>
+          <option>Leeds</option>
+          <option>Liverpool</option>
+          <option>Bristol</option>
+          <option>Newcastle</option>
+          <option>Sheffield</option>
+          <option>Nottingham</option>
+          <option>Leicester</option>
+          <option>Cardiff</option>
+          <option>Edinburgh</option>
+          <option>Glasgow</option>
+          <option>Belfast</option>
+          <option>Southampton</option>
+        </select>
+      </div>
+
+      <button type="submit" class="govuk-button govuk-!-margin-top-7" data-module="govuk-button">
+        Save and continue
+      </button>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
